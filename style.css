@@ -46,8 +46,9 @@ body {
 #age-check-form input {
 	margin: 0.5rem 0;
 	border-radius: 3px;
-	width: 50px;
+	width: 75px;
 	height: 2rem;
+	text-align: center;
 }
 
 #age-check-form button {
@@ -57,4 +58,9 @@ body {
 	text-transform: uppercase;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+#age-check-form .group {
+	padding: 0 0.5rem;
+	text-align: center;
 }
