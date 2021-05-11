@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	max-width: 85%;
+	margin: 0 auto;
+}
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+#age-check-form {
+	background-color: #eae2b7;
+	border: 1px solid grey;
+	padding: 2rem;
+	border-radius: 5px;
+	color: #f77f00;
+}
+
+#age-check-form label {
+	font-size: 1rem;
+}
+
+#age-check-form input {
+	margin: 0.5rem 0;
+	border-radius: 3px;
+	width: 50px;
+	height: 2rem;
+}
+
+#age-check-form button {
+	background-color: #003049;
+	padding: 1rem;
+	color: #fcbf49;
+	text-transform: uppercase;
+	border-radius: 5px;
+	cursor: pointer;
+}
