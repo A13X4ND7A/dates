@@ -2,6 +2,9 @@ const ageCheckFormEl = document.getElementById('age-check-form');
 const ageDayEl = document.getElementById('day-input');
 const ageMonthEl = document.getElementById('month-input');
 const ageYearEl = document.getElementById('year-input');
+const resultEl = document.getElementById('result');
+const check = document.getElementById('check');
+const cross = document.getElementById('cross');
 
 let day = +ageDayEl.value;
 let month = +ageMonthEl.value;
@@ -88,8 +91,20 @@ function getDate() {
 	let convertedDate = eighteenYearsPrevious.toISOString();
 
 	if (inputDate <= convertedDate) {
+		console.log(resultEl);
+		resultEl.innerText = 'Great news, the user is over 18!';
+		resultEl.classList.add('green');
+		check.classList.add('show-check');
+		cross.classList.remove('show-cross');
+		resultEl.classList.remove('red');
+
 		console.log('the User is over 18');
 	} else {
+		resultEl.innerText = 'Sorry, the user is under 18!';
+		resultEl.classList.add('red');
+		resultEl.classList.remove('green');
+		check.classList.remove('show-check');
+		cross.classList.add('show-cross');
 		console.log('Sorry the user is under 18');
 	}
 	console.log(convertedDate);

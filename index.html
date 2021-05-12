@@ -17,11 +17,15 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<h1 class="container">Date Input Challenge</h1>
+
 		<div class="container flex flex-row">
 			<div class="age-check flex flex-col">
 				<h2>Age Checker</h2>
+				<p>I was set a challenge by a senior software engineer - to produce a date input that calculated whether or not a user was under 18.</p>
+
 				<form id="age-check-form" class="flex flex-col">
-					<label for="ageInput">Please input your age</label>
+					<h3>Please input your age</h3>
 					<div class="date-group flex flex-row">
 						<div class="group flex flex-col">
 							<label for="day" class="date-group-label">Day</label>
@@ -36,8 +40,19 @@
 							<input type="number" id="year-input" value="2000" min="1900" onchange="isLeapYear(this.value)" />
 						</div>
 					</div>
+					<i id="check" class="fas fa-check" aria-hidden="true"></i>
+					<i id="cross" class="fa fa-times" aria-hidden="true"></i>
+					<div id="result"></div>
 					<button type="submit" id="submit">Calculate</button>
 				</form>
+			</div>
+
+			<div class="flex flex-col right future-date">
+				<h2>Future Date Input</h2>
+				<p class="container">
+					A second project I was tasked with, was to not allow a user to input a past date when inputting a date. A possibile use for this would be used within
+					a system where by putting in a date for a delivery perhaps.
+				</p>
 			</div>
 		</div>
 
