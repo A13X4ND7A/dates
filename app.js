@@ -5,6 +5,9 @@ const ageYearEl = document.getElementById('year-input');
 const resultEl = document.getElementById('result');
 const check = document.getElementById('check');
 const cross = document.getElementById('cross');
+const result2El = document.getElementById('result2');
+const check2 = document.getElementById('check2');
+const cross2 = document.getElementById('cross2');
 
 let day = +ageDayEl.value;
 let month = +ageMonthEl.value;
@@ -109,4 +112,34 @@ function getDate() {
 	}
 	console.log(convertedDate);
 	console.log(inputDate);
+}
+
+//AGE CHECKER NUMBER 2 //
+const datePickerFormEl = document.getElementById('datePicker-form');
+
+datePickerFormEl.addEventListener('submit', (e) => {
+	var dateControl = document.getElementById('age-calc-two');
+	getPickerDate(dateControl.value);
+	e.preventDefault();
+});
+
+function getPickerDate(val) {
+	let convertedDate = eighteenYearsPrevious.toISOString();
+	let inputedPickerDate = new Date(val).toISOString();
+	if (inputedPickerDate <= convertedDate) {
+		result2El.innerText = 'Great news, the user is over 18!';
+		result2El.classList.add('green');
+		check2.classList.add('show-check');
+		cross2.classList.remove('show-cross');
+		result2El.classList.remove('red');
+
+		console.log('the User is over 18');
+	} else {
+		result2El.innerText = 'Sorry, the user is under 18!';
+		result2El.classList.add('red');
+		result2El.classList.remove('green');
+		check2.classList.remove('show-check');
+		cross2.classList.add('show-cross');
+		console.log('Sorry the user is under 18');
+	}
 }
