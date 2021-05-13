@@ -49,42 +49,49 @@
 					<h2>Age Checker 2</h2>
 					<form id="datePicker-form" class="flex flex-col">
 						<h3>Please input your age</h3>
-						<input type="date" id="age-calc-two" name="age-calc" />
+						<input type="date" id="age-calc-two" name="age-calc" value="2000-01-01"/>
 						<span class="validity"></span>
 
 						<i id="check2" class="fas fa-check" aria-hidden="true"></i>
 						<i id="cross2" class="fa fa-times" aria-hidden="true"></i>
 						<div id="result2"></div>
-						<button type="submit" id="submit">Calculate</button>
+						<button type="submit" id="submit2">Calculate</button>
 					</form>
 				</div>
 			</div>
 
 			<div class="flex flex-col right future-date">
 				<p>I was tasked with to not allow a user to input a past date when inputting a date.</p>
-				<h2>Future Date 1</h2>
+				<h2>Future Date</h2>
 				<div class="future-date1 flex flex-col">
-					<h3>Please Input your date</h3>
+					<h3>Please Input future date</h3>
 					<input id="futureDate1" type="date" name="fd-date" />
 				</div>
 
 				<h2>Future Date 2</h2>
 				<div class="future-date2 flex flex-col">
-					<h3>Please Input your date</h3>
+					<form id="future-form" class="flex flex-col"></form>
+					<h3>Please Input future date</h3>
 					<div class="date-group flex flex-row">
 						<div class="group flex flex-col">
 							<label for="day" class="date-group-label">Day</label>
-							<input type="number" id="day-input2" min="01" max="31" />
+							<input type="number" id="day-input2" value="01" min="01" max="31" />
 						</div>
 						<div class="group flex flex-col">
 							<label for="month" class="date-group-label">Month</label>
-							<input type="number" id="month-input2" min="01" max="12" />
+							<input type="number" id="month-input2" value="01" min="01" max="12" onchange="maxDays2(this.value)" />
 						</div>
 						<div class="group flex flex-col">
 							<label for="year" class="date-group-label">Year</label>
-							<input type="number" id="year-input2" />
+							<input type="number" id="year-input2" value="2000" min="1900" onchange="isLeapYear2(this.value)" />
 						</div>
+						
+						
 				</div>
+				<button type="submit" id="submit3" onclick="checkDate()">Calculate</button>
+				<div id="results" class="error">The date needs to be in the future</div>
+				
+			</form>
 			</div>
 		</div>
 

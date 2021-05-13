@@ -1,6 +1,7 @@
 const ageCheckFormEl = document.getElementById('age-check-form');
 const ageDayEl = document.getElementById('day-input');
 const ageMonthEl = document.getElementById('month-input');
+
 const ageYearEl = document.getElementById('year-input');
 const resultEl = document.getElementById('result');
 const check = document.getElementById('check');
@@ -40,11 +41,11 @@ function isLeapYear(year) {
 		if (leapYear) {
 			let maximumDays = 29;
 			calcMaxDays(maximumDays);
-			// console.log('it is a leap year!!!!' + maximumDays);
+			console.log('it is a leap year!!!!' + maximumDays);
 		} else {
 			maximumDays = 28;
 			calcMaxDays(maximumDays);
-			// console.log('it is february' + maximumDays);
+			console.log('it is february' + maximumDays);
 		}
 	}
 }
@@ -118,9 +119,9 @@ function getDate() {
 const datePickerFormEl = document.getElementById('datePicker-form');
 
 datePickerFormEl.addEventListener('submit', (e) => {
+	e.preventDefault();
 	var dateControl = document.getElementById('age-calc-two');
 	getPickerDate(dateControl.value);
-	e.preventDefault();
 });
 
 function getPickerDate(val) {

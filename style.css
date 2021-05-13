@@ -109,8 +109,8 @@ h3 {
 	box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.2), inset 0 12px 20px 6px rgba(0, 0, 0, 0.2), inset 0 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-#age-check-form .group {
-	padding: 0 0.5rem;
+.group {
+	padding: 0.5rem;
 	text-align: center;
 }
 
@@ -135,7 +135,8 @@ h3 {
 	opacity: 0;
 }
 
-.red {
+.red,
+.error {
 	color: #b40052;
 }
 
@@ -158,7 +159,8 @@ h3 {
 	width: 350px;
 }
 
-#datePicker-form button {
+#submit2,
+#submit3 {
 	background-image: linear-gradient(#a7c4dd, #42525f);
 	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.5);
 	border: 0;
@@ -171,12 +173,14 @@ h3 {
 	transition: all linear 0.2s;
 }
 
-#datePicker-form button:hover,
-#datePicker-form button:focus {
+#submit2:hover,
+#submit3:hover #submit2:focus,
+#submit3:focus {
 	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), inset 0 -2px 0 0 rgba(0, 0, 0, 0.3), inset 0 12px 20px 2px #658aac;
 }
 
-#datePicker-form button:active {
+#submit2:active,
+#submit3:avtive {
 	box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.2), inset 0 12px 20px 6px rgba(0, 0, 0, 0.2), inset 0 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -208,4 +212,18 @@ h3 {
 	width: 75px;
 	height: 2rem;
 	text-align: center;
+}
+
+.error {
+	opacity: 0;
+	transition: all 500ms ease;
+}
+
+.error-show {
+	opacity: 1;
+}
+
+.success {
+	color: #116530;
+	opacity: 1;
 }
