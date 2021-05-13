@@ -78,6 +78,7 @@ function checkDate() {
 	let month2 = +ageMonth2El.value;
 	let year2 = +ageYear2El.value;
 	let newInputDate = new Date(year2, month2 - 1, day2).toISOString();
+	let newInputDateConverted = new Date(newInputDate).toLocaleDateString();
 
 	let currentDate = new Date().toISOString();
 
@@ -89,7 +90,7 @@ function checkDate() {
 		}, 3000);
 	} else if (currentDate < newInputDate) {
 		resultsEl.classList.add('success');
-		resultsEl.innerText = 'Your chosen date is: ' + newInputDate.substr(0, 10);
+		resultsEl.innerText = 'Your chosen date is: ' + newInputDateConverted;
 		setTimeout(function () {
 			resultsEl.classList.remove('success');
 		}, 3000);
